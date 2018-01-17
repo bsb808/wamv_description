@@ -5,22 +5,22 @@
   <link name="base_link">
     <visual>
      <geometry>
-       <mesh filename="package://wamv_description/mesh/blender/WAM-V-Base.dae"/>
+       <mesh filename="package://wamv_description/mesh/WAM-V-Base.dae"/>
      </geometry>
    </visual>
    <collision name="base_link_collision">
      <geometry>
-       <mesh filename="package://wamv_description/mesh/blender/WAM-V-Base.dae"/>
+       <mesh filename="package://wamv_description/mesh/WAM-V-Base.dae"/>
      </geometry>
    </collision>
    <inertial>
-     <mass value="247.07"/>
-     <inertia ixx="200" ixy="0.03" ixz="3.09" iyy="500" iyz="-0.05" izz="165.39"/>
+     <mass value="180.0"/> <!-- From von Ellenrieder -->
+     <inertia ixx="200.0" ixy="0.03" ixz="3.09" iyy="500" iyz="-0.05" izz="250.0"/>
    </inertial>
   </link>
 
   <joint name="base_link_joint" type="fixed">
-    <origin xyz="0 0 1.84"/>
+    <origin xyz="0 0 0"/>
     <parent link="base_footprint"/>
     <child link="base_link"/>
   </joint>

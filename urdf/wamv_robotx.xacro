@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="WAM-V">
+  <!-- Defines the base vehicle -->
+  <xacro:include filename="$(find wamv_description)/urdf/wamv_base.xacro" />
+
+  <!-- Attached hydrodynamics plugin -->
+  <xacro:include filename="$(find usv_gazebo_plugins)/urdf/wamv_gazebo_dynamics_plugin.xacro" />
+  <xacro:usv_gazebo name="wamv_plugin"/>
+  
+</robot>
